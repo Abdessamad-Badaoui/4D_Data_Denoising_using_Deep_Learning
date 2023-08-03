@@ -2,7 +2,7 @@
 This project aims to compare and evaluate various deep learning methods for denoising 4D neutron data (.sqw files). The methods that will be studied include Noise2Self, Noise2Void and Nl_means. The aim is to understand the advantages and limitations of each approach and to provide practical information for users who wish to apply these image denoising techniques in their own projects.
 We propose to reproduce the results using simulated images that have been noised with different levels of Gaussian and poissonian noise. The noisy images will be stored in the `simulations` directory, and each sub-folder will correspond to a specific type of noise, containing the different realisations.
 
-## Instructions on how to reproduce the results:
+## Instructions on how to test the methods on images:
 
 ### 1. First, Clone this repository using the following command :
 ```shell
@@ -104,7 +104,7 @@ Simulation 3  | 41.09
 Simulation 4  | 46.99
 
 
-## Workflow for denoising .sqw files :
+## Workflow for denoising .sqw files (4D neutron Data):
 
 We are going to give some guidelines on how to carry out the different stages of the workflow on a given data set.
 
@@ -143,11 +143,11 @@ Firstly, given the number of patches that will be generated, we need to divide t
 X = patches[:N]
 X_val = patches[N:]
 ```
-In general, you always need more than 90% of the data for training, and the rest for validation.
+In general, you always need more than 90% of the data for training, and the rest for validation (if we have sufficient data).
 
-The `train_steps_per_epoch` parameter is equal to `number of training patches`/`batch size`, but it can be exceeded to see the data more than once in the same epoch. Increasing this parameter greatly increases the training time, but there is an improvement in the predections.
+The `train_steps_per_epoch` parameter is equal to `number of training patches`/`batch size`, but it can be exceeded in our case to see the data more than once in the same epoch. Increasing this parameter increases the training time, but there is an improvement in the predections. However, you should also exercise caution regarding overfitting.
 
-We also have other parameters like `train_epochs` and `train_batch_size` that we can adjust to get better results.
+We also have other hyperparameters like `train_epochs`, `train_batch_size` and so on that we can adjust to get better results.
 
 
 To do the training, we run the following command:
