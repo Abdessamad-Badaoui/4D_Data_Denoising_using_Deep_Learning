@@ -1,5 +1,5 @@
 # Comparison of Deep Learning methods for 4D data denoising
-This project aims to compare and evaluate various deep learning methods for denoising 4D neutron data. The methods that will be studied include Noise2Self, Noise2Noise, Noise2Void and Nl_means. The aim is to understand the advantages and limitations of each approach and to provide practical information for users who wish to apply these image denoising techniques in their own projects.
+This project aims to compare and evaluate various deep learning methods for denoising 4D neutron data (.sqw files). The methods that will be studied include Noise2Self, Noise2Void and Nl_means. The aim is to understand the advantages and limitations of each approach and to provide practical information for users who wish to apply these image denoising techniques in their own projects.
 We propose to reproduce the results using simulated images that have been noised with different levels of Gaussian and poissonian noise. The noisy images will be stored in the `simulations` directory, and each sub-folder will correspond to a specific type of noise, containing the different realisations.
 
 ## Instructions on how to reproduce the results:
@@ -36,7 +36,7 @@ python3 denoise.py ../simulations/test_dataset/gaussian_images/simulation_gaussi
 This command takes the image to be denoised as its first argument, followed by the original noise-free image (used to calculate the PSNR).
 The results obtained in terms of PSNR for this method are presented in the following table, the methods will be tested on the images contained in the directory `test_dataset`, we will focus in this presentation on the Poisson noise, because it is the type of noise closest to the noise that will be present in our real data:
 
-|  | Bruit Poisson |
+|  | PSNR |
 | ----------- | --------- |
 | Simulation 0 |  37.40 |
 | Simulation 1 | 37.38 |
@@ -56,7 +56,7 @@ python3 denoise.py ../simulations/test_dataset/gaussian_images/simulation_gaussi
 This command takes the image to be denoised as its first argument, followed by the original noise-free image (used to calculate the PSNR).
 The results obtained in terms of PSNR for this method are presented in the following table :
 
-|  | Bruit Poisson |
+|  | PSNR |
 | ----------- | --------- |
 | Simulation 0 |  40.38 |
 | Simulation 1 | 39.97 |
@@ -76,7 +76,7 @@ python3 predict.py ../simulations/test_dataset/poisson_images/simulation_poisson
 This command takes the image to be denoised as its first argument, followed by the original noise-free image (used to calculate the PSNR), and finally the model to be used. When this command is run, a denoised image will be generated and stored in the `denoised_images` directory. In addition, the command will return the corresponding PSNR value, which measures the quality of the denoised image compared with the original image.
 The results obtained in terms of PSNR for this method are shown in the following table:
 
-|  | Bruit Poisson |
+|  | PSNR |
 | -----------  | --------- |
 | Simulation 0  | 30.05 |
 | Simulation 1  | 34.03 |
@@ -95,7 +95,7 @@ This command takes the image to be denoised as its first argument, followed by t
 
 
 The results obtained in terms of PSNR for this method are presented in the following table:
-|  | Bruit Poisson |
+|  | PSNR |
 | -----------  | --------- |
 | Simulation 0 | 40.57 |
 | Simulation 1  | 48.35 |
