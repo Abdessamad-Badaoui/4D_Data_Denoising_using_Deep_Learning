@@ -1,4 +1,4 @@
-# Comparison of Deep Learning methods for image denoising
+# Comparison of Deep Learning methods for 4D data denoising
 This project aims to compare and evaluate various deep learning methods for denoising 4D neutron data. The methods that will be studied include Noise2Self, Noise2Noise, Noise2Void and Nl_means. The aim is to understand the advantages and limitations of each approach and to provide practical information for users who wish to apply these image denoising techniques in their own projects.
 We propose to reproduce the results using simulated images that have been noised with different levels of Gaussian and poissonian noise. The noisy images will be stored in the `simulations` directory, and each sub-folder will correspond to a specific type of noise, containing the different realisations.
 
