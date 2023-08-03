@@ -3,16 +3,10 @@ This project aims to compare and evaluate various deep learning methods for deno
 We propose to reproduce the results using simulated images that have been noised with different levels of Gaussian and poissonian noise. The noisy images will be stored in the `simulations` directory, and each sub-folder will correspond to a specific type of noise, containing the different realisations.
 
 ## Instructions on how to reproduce the results:
-### 0. Preliminary
-It is recommended to prepare a conda environment to have all the python dependencies.
-We tested on *gammagpu1* with account *ics* in environment *denoiseenv* activated:
-```
-conda activate denoisenv
-```
 
 ### 1. First, Clone this repository using the following command :
 ```shell
-git clone https://code.ill.fr/instrument-control/protos/denoising/noise-tools-comparison
+git clone https://github.com/Abdessamad-Badaoui/4D_Data_Denoising
 ```
 ### 2. Data Preparation :
 To generate the noisy images, we provide a script called `generate.py`. This script generates 100 images of `simulations{N}.png` simulations which will be stored in the `simulations_clean_train` directory. Next, we will add noise using `noise.py`. You can run it by typing the following command:
